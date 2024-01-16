@@ -11,7 +11,8 @@ public class Q1_TwoNumbers {
         for(int i= 0; i< nums.length ; i++){
             var complement = target - nums[i];
             if(map.containsKey(complement) ){
-                return new int[]{map.get(complement), i};
+                result[0] = map.get(complement);
+                result[1] = i;
             }
             map.put(nums[i],i);
         }
